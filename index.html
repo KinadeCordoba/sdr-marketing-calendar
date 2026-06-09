@@ -27,271 +27,82 @@
     --font: 'Inter', system-ui, sans-serif;
   }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    min-height: 100vh;
-  }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); min-height: 100vh; }
 
-  /* ── Header ── */
-  header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .logo { display: flex; align-items: center; gap: 10px; }
-
-  .logo-mark {
-    width: 32px; height: 32px;
-    background: var(--accent);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
+  .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px; font-weight: 700; flex-shrink: 0; }
   h1 { font-size: 16px; font-weight: 600; color: var(--text); }
   .subtitle { font-size: 12px; color: var(--muted); margin-top: 1px; }
-
   .controls { display: flex; align-items: center; gap: 8px; }
-
-  .btn {
-    background: var(--surface2);
-    border: 1px solid var(--border2);
-    color: var(--text);
-    padding: 6px 13px;
-    border-radius: 7px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background 0.12s;
-    font-family: var(--font);
-    text-decoration: none;
-    display: inline-block;
-  }
+  .btn { background: var(--surface2); border: 1px solid var(--border2); color: var(--text); padding: 6px 13px; border-radius: 7px; font-size: 13px; cursor: pointer; transition: background 0.12s; font-family: var(--font); text-decoration: none; display: inline-block; }
   .btn:hover { background: var(--border); }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
   .btn.primary:hover { filter: brightness(1.1); }
 
-  /* ── Refresh bar ── */
-  .refresh-bar {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 28px;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .status-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--green);
-    animation: pulse 2.5s infinite;
-    flex-shrink: 0;
-  }
+  .refresh-bar { background: var(--surface); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; padding: 8px 28px; font-size: 12px; color: var(--muted); }
+  .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2.5s infinite; flex-shrink: 0; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
 
-  /* ── Nav bar ── */
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 28px 8px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px 8px; flex-wrap: wrap; gap: 10px; }
   .month-nav { display: flex; align-items: center; gap: 10px; }
-  .month-nav button {
-    background: var(--surface);
-    border: 1px solid var(--border2);
-    color: var(--text);
-    width: 30px; height: 30px;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 15px;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.12s;
-  }
+  .month-nav button { background: var(--surface); border: 1px solid var(--border2); color: var(--text); width: 30px; height: 30px; border-radius: 7px; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; transition: background 0.12s; }
   .month-nav button:hover { background: var(--surface2); }
   .month-label { font-size: 18px; font-weight: 700; min-width: 175px; text-align: center; }
-
-  .view-toggle {
-    display: flex;
-    gap: 3px;
-    background: var(--surface2);
-    border: 1px solid var(--border2);
-    border-radius: 7px;
-    padding: 3px;
-  }
-  .view-toggle button {
-    background: none; border: none;
-    color: var(--muted);
-    padding: 4px 12px; border-radius: 5px;
-    cursor: pointer; font-size: 12px; font-family: var(--font);
-    transition: all 0.12s;
-  }
+  .view-toggle { display: flex; gap: 3px; background: var(--surface2); border: 1px solid var(--border2); border-radius: 7px; padding: 3px; }
+  .view-toggle button { background: none; border: none; color: var(--muted); padding: 4px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; font-family: var(--font); transition: all 0.12s; }
   .view-toggle button.active { background: var(--surface); color: var(--text); font-weight: 500; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
 
-  /* ── Legend ── */
-  .legend {
-    display: flex; gap: 14px; padding: 4px 28px 10px;
-    flex-wrap: wrap;
-  }
+  .legend { display: flex; gap: 14px; padding: 4px 28px 10px; flex-wrap: wrap; }
   .legend-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); }
   .legend-swatch { width: 10px; height: 10px; border-radius: 3px; }
 
-  /* ── Error ── */
-  .error-msg {
-    background: #fef2f2; border: 1px solid #fecaca;
-    border-radius: 8px; padding: 10px 16px;
-    margin: 0 28px 12px;
-    font-size: 12px; color: #b91c1c; display: none;
-  }
+  .error-msg { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 10px 16px; margin: 0 28px 12px; font-size: 12px; color: #b91c1c; display: none; }
   .error-msg.show { display: block; }
 
-  /* ── Calendar ── */
   .calendar-wrap { padding: 0 28px 32px; }
-
-  .cal-header {
-    display: grid; grid-template-columns: repeat(7,1fr); gap: 2px; margin-bottom: 3px;
-  }
-  .cal-header div {
-    text-align: center; font-size: 11px; font-weight: 600;
-    color: var(--muted); padding: 6px 0;
-    text-transform: uppercase; letter-spacing: .7px;
-  }
-
+  .cal-header { display: grid; grid-template-columns: repeat(7,1fr); gap: 2px; margin-bottom: 3px; }
+  .cal-header div { text-align: center; font-size: 11px; font-weight: 600; color: var(--muted); padding: 6px 0; text-transform: uppercase; letter-spacing: .7px; }
   .cal-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 3px; }
-
-  .cal-day {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    min-height: 118px;
-    padding: 8px 7px;
-    transition: border-color 0.12s;
-  }
+  .cal-day { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; min-height: 118px; padding: 8px 7px; transition: border-color 0.12s; }
   .cal-day:hover { border-color: var(--border2); box-shadow: 0 1px 4px rgba(0,0,0,.06); }
   .cal-day.other-month { background: var(--bg); opacity: .5; }
   .cal-day.today { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-
-  .day-num {
-    font-size: 12px; font-weight: 600; color: var(--muted);
-    margin-bottom: 5px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
+  .day-num { font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between; }
   .cal-day.today .day-num { color: var(--accent); }
-
-  .event-chip {
-    font-size: 10px; padding: 4px 6px; border-radius: 4px;
-    margin-bottom: 2px; cursor: pointer;
-    overflow: hidden;
-    transition: filter 0.1s; line-height: 1.4; display: block; font-weight: 500;
-  }
+  .event-chip { font-size: 10px; padding: 4px 6px; border-radius: 4px; margin-bottom: 2px; cursor: pointer; overflow: hidden; transition: filter 0.1s; line-height: 1.4; display: block; font-weight: 500; }
   .event-chip:hover { filter: brightness(.92); }
-
   .status-approved { background: var(--green-bg); color: var(--green); }
   .status-pending   { background: var(--yellow-bg); color: var(--yellow); }
   .status-pushed    { background: var(--purple-bg); color: var(--purple); }
-
-  .more-chip {
-    font-size: 10px; color: var(--muted); padding: 2px 4px;
-    cursor: pointer; text-align: center;
-  }
+  .more-chip { font-size: 10px; color: var(--muted); padding: 2px 4px; cursor: pointer; text-align: center; }
   .more-chip:hover { color: var(--text); }
 
-  /* ── List view ── */
   .list-view { padding: 0 28px 32px; display: none; }
-  .list-view.active { display: block; }
-
-  .list-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px; padding: 14px 18px;
-    margin-bottom: 8px;
-    display: grid; grid-template-columns: 4px 1fr auto;
-    gap: 14px; align-items: start;
-    transition: box-shadow 0.12s, border-color 0.12s;
-    cursor: pointer;
-  }
+  .list-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 8px; display: grid; grid-template-columns: 4px 1fr auto; gap: 14px; align-items: start; transition: box-shadow 0.12s, border-color 0.12s; cursor: pointer; }
   .list-card:hover { border-color: var(--border2); box-shadow: 0 2px 8px rgba(0,0,0,.07); }
-
   .list-card .stripe { width: 4px; border-radius: 2px; align-self: stretch; min-height: 36px; }
   .list-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
-  .list-card .meta {
-    display: flex; flex-wrap: wrap; gap: 7px;
-    font-size: 12px; color: var(--muted); margin-top: 5px;
-  }
-
-  .tag {
-    background: var(--surface2); border: 1px solid var(--border);
-    border-radius: 4px; padding: 1px 7px;
-    font-size: 11px; color: var(--muted);
-  }
-
-  .status-badge {
-    font-size: 11px; font-weight: 600; padding: 3px 9px;
-    border-radius: 20px; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap;
-  }
-  .badge-approved { background: var(--green-bg);  color: var(--green);  }
+  .list-card .meta { display: flex; flex-wrap: wrap; gap: 7px; font-size: 12px; color: var(--muted); margin-top: 5px; }
+  .tag { background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; padding: 1px 7px; font-size: 11px; color: var(--muted); }
+  .status-badge { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; }
+  .badge-approved { background: var(--green-bg); color: var(--green); }
   .badge-pending  { background: var(--yellow-bg); color: var(--yellow); }
   .badge-pushed   { background: var(--purple-bg); color: var(--purple); }
   .badge-rejected { background: #fee2e2; color: #b91c1c; }
 
-  /* ── Modal ── */
-  .modal-bg {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,.35); backdrop-filter: blur(3px);
-    z-index: 100; align-items: center; justify-content: center;
-  }
+  .modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.35); backdrop-filter: blur(3px); z-index: 100; align-items: center; justify-content: center; }
   .modal-bg.open { display: flex; }
-
-  .modal {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 26px; max-width: 520px; width: 92%;
-    max-height: 85vh; overflow-y: auto; position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,.15);
-  }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; max-width: 520px; width: 92%; max-height: 85vh; overflow-y: auto; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,.15); }
   .modal h2 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
-  .modal-close {
-    position: absolute; top: 14px; right: 14px;
-    background: var(--surface2); border: 1px solid var(--border2);
-    color: var(--muted); width: 28px; height: 28px; border-radius: 7px;
-    cursor: pointer; font-size: 14px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .modal-row {
-    display: grid; grid-template-columns: 120px 1fr;
-    gap: 5px 12px; margin-bottom: 7px; font-size: 13px;
-  }
+  .modal-close { position: absolute; top: 14px; right: 14px; background: var(--surface2); border: 1px solid var(--border2); color: var(--muted); width: 28px; height: 28px; border-radius: 7px; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  .modal-row { display: grid; grid-template-columns: 120px 1fr; gap: 5px 12px; margin-bottom: 7px; font-size: 13px; }
   .modal-row .label { color: var(--muted); }
   .modal-row .value { color: var(--text); }
   .modal-divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
 
-  /* ── Loading ── */
-  .loading {
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: center; padding: 60px; color: var(--muted); gap: 10px;
-  }
-  .spinner {
-    width: 26px; height: 26px;
-    border: 2px solid var(--border2);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin .7s linear infinite;
-  }
+  .loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px; color: var(--muted); gap: 10px; }
+  .spinner { width: 26px; height: 26px; border: 2px solid var(--border2); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
@@ -370,7 +181,6 @@ let currentMonth = new Date().getMonth();
 let currentView  = 'calendar';
 let refreshTimer = null;
 
-// ── CSV parser ────────────────────────────────────────────────────────────────
 function parseCSV(text) {
   const rows = [[]];
   let cur = '', inQ = false;
@@ -401,126 +211,66 @@ function parseDate(s) {
   return isNaN(d) ? null : d;
 }
 
-// ── Parse campaigns ───────────────────────────────────────────────────────────
 function parseCampaigns(rows) {
-  // Find the header row
   let hi = rows.findIndex(r => r[0] === 'Marketing Proposal Name');
   if (hi < 0) return [];
-
   const H = rows[hi];
   const c = name => H.findIndex(h => h.toLowerCase().includes(name.toLowerCase()));
-
-  // Proposal columns
   const C = {
-    name:       0,
-    by:         c('Submitted by'),
-    type:       c('Type of Proposal'),
-    goal:       c('Primary goal'),
-    desc:       c('Proposal Description'),
-    link:       c('Share link'),
-    seg:        c('Targeting Segments'),
-    impact:     c('Who does this impact'),
-    launch:     c('Proposed Launch Date'),
-    dur:        c('Duration'),
-    justify:    c('Timing Justification'),
-    sdrDo:      c('What do you need SDRs'),
-    assets:     c('Are supporting assets'),
-    priority:   c('Priority'),
-    announce:   c('Announcements will go out'),
-    timestamp:  c('Timestamp'),
-    // Approval columns (also in same header row, cols S/T/U)
-    approver:   c('Approver'),
-    status:     c('Status'),
-    pushed:     c('Pushed Out Launch date'),
+    name:0, by:c('Submitted by'), type:c('Type of Proposal'), goal:c('Primary goal'),
+    desc:c('Proposal Description'), link:c('Share link'), seg:c('Targeting Segments'),
+    impact:c('Who does this impact'), launch:c('Proposed Launch Date'), dur:c('Duration'),
+    justify:c('Timing Justification'), sdrDo:c('What do you need SDRs'),
+    assets:c('Are supporting assets'), priority:c('Priority'),
+    announce:c('Announcements will go out'), timestamp:c('Timestamp'),
+    approver:c('Approver'), status:c('Status'), pushed:c('Pushed Out Launch date'),
   };
-
   const get = (row, idx) => (idx >= 0 && idx < row.length) ? (row[idx] || '').trim() : '';
-
   const result = [];
   let i = hi + 1;
-
   while (i < rows.length) {
     const row = rows[i];
     const name = get(row, C.name);
-
-    // Skip rows with no proposal name (these are standalone approval rows
-    // that belong to the previous proposal — already consumed below)
     if (!name) { i++; continue; }
-
-    // ── Read approval data ──
-    // The Slack workflow appends approval responses as a NEW ROW with col A empty.
-    // Col S = Approver, Col T = Status, Col U = Pushed Out Launch date.
-    // We look at BOTH the current row AND the next empty-name row.
-    let approver   = get(row, C.approver);
-    let statusRaw  = get(row, C.status);
-    let pushedRaw  = get(row, C.pushed);
-
-    // Check the very next row — if col A is empty, it's the approval row
+    let approver = get(row, C.approver);
+    let statusRaw = get(row, C.status);
+    let pushedRaw = get(row, C.pushed);
     if (i + 1 < rows.length) {
       const next = rows[i + 1];
-      const nextName = get(next, C.name);
-      if (!nextName) {
-        // It's an approval row — override with its values (they're authoritative)
+      if (!get(next, C.name)) {
         const na = get(next, C.approver);
         const ns = get(next, C.status);
         const np = get(next, C.pushed);
-        if (na) approver  = na;
+        if (na) approver = na;
         if (ns) statusRaw = ns;
         if (np) pushedRaw = np;
-        i += 2; // consume both rows
-      } else {
-        i++;
-      }
-    } else {
-      i++;
-    }
-
-    // ── Normalise status ──
+        i += 2;
+      } else { i++; }
+    } else { i++; }
     const sl = statusRaw.toLowerCase();
     let status = 'pending';
-    if      (sl.includes('approve'))           status = 'approved';
-    else if (sl.includes('reject'))            status = 'rejected';
-    else if (sl.includes('push'))              status = 'pushed';
-    else if (!statusRaw && approver)           status = 'approved'; // approver set → approved
-
-    // ── Dates ──
-    const launchDate  = parseDate(get(row, C.launch));
-    const pushedDate  = parseDate(pushedRaw);
+    if      (sl.includes('approve')) status = 'approved';
+    else if (sl.includes('reject'))  status = 'rejected';
+    else if (sl.includes('push'))    status = 'pushed';
+    else if (!statusRaw && approver) status = 'approved';
+    const launchDate = parseDate(get(row, C.launch));
+    const pushedDate = parseDate(pushedRaw);
     const effectiveDate = pushedDate || launchDate;
     const dur = parseFloat(get(row, C.dur)) || 1;
-    const endDate = effectiveDate
-      ? new Date(effectiveDate.getTime() + (dur * 7 - 1) * 86400000)
-      : null;
-
+    const endDate = effectiveDate ? new Date(effectiveDate.getTime() + (dur * 7 - 1) * 86400000) : null;
     result.push({
-      name,
-      submittedBy: get(row, C.by),
-      type:        get(row, C.type),
-      goal:        get(row, C.goal),
-      desc:        get(row, C.desc),
-      link:        get(row, C.link),
-      segments:    get(row, C.seg),
-      impact:      get(row, C.impact),
-      launchDate:  effectiveDate,
-      originalLaunch: launchDate,
-      durationWeeks: dur,
-      endDate,
-      justify:     get(row, C.justify),
-      sdrDo:       get(row, C.sdrDo),
-      assets:      get(row, C.assets),
-      priority:    get(row, C.priority),
-      announceDate: parseDate(get(row, C.announce)),
-      timestamp:   get(row, C.timestamp),
-      approver,
-      status,
-      statusRaw,
-      pushedDateRaw: pushedRaw,
+      name, submittedBy:get(row,C.by), type:get(row,C.type), goal:get(row,C.goal),
+      desc:get(row,C.desc), link:get(row,C.link), segments:get(row,C.seg),
+      impact:get(row,C.impact), launchDate:effectiveDate, originalLaunch:launchDate,
+      durationWeeks:dur, endDate, justify:get(row,C.justify), sdrDo:get(row,C.sdrDo),
+      assets:get(row,C.assets), priority:get(row,C.priority),
+      announceDate:parseDate(get(row,C.announce)), timestamp:get(row,C.timestamp),
+      approver, status, statusRaw, pushedDateRaw:pushedRaw,
     });
   }
   return result;
 }
 
-// ── Fetch ─────────────────────────────────────────────────────────────────────
 async function fetchData() {
   try {
     const res = await fetch(`${SHEET_URL}&t=${Date.now()}`, { cache: 'no-store' });
@@ -546,21 +296,9 @@ async function fetchData() {
 function getDemoData() {
   const d = (y,m,day) => new Date(y, m-1, day);
   return [
-    { name:'Calendar Creation Testing', submittedBy:'@Lindsey', type:'Incentives', goal:'Awareness',
-      desc:'Testing stuff', link:'www.google.com', segments:'Retail', impact:'NAMER',
-      launchDate:d(2026,6,12), originalLaunch:d(2026,6,12), durationWeeks:2,
-      endDate:d(2026,6,25), status:'approved', statusRaw:'Approve',
-      approver:'@Kina de Cordoba', pushedDateRaw:'', justify:'cuz', sdrDo:'nope.', assets:'Yes', priority:'CUZ', announceDate:d(2026,6,10), timestamp:'' },
-    { name:'Fixing B Option', submittedBy:'@Lindsey', type:'Direct Mailer', goal:'fixing bugs',
-      desc:'the same as above', link:'www.bug.com', segments:'Core OB ENT', impact:'INTERNATIONAL',
-      launchDate:d(2026,6,22), originalLaunch:d(2026,6,15), durationWeeks:2,
-      endDate:d(2026,7,5), status:'pushed', statusRaw:'Push Out',
-      approver:'@Kina de Cordoba', pushedDateRaw:'2026-06-22', justify:'cuz', sdrDo:'', assets:'Yes', priority:'cuz', announceDate:d(2026,6,14), timestamp:'' },
-    { name:'Testing the reject button', submittedBy:'@Charles Becker', type:'Events', goal:'testing',
-      desc:'testing', link:'www.test.com', segments:'Core OB SMB', impact:'US Only',
-      launchDate:d(2026,6,15), originalLaunch:d(2026,6,15), durationWeeks:2,
-      endDate:d(2026,6,28), status:'rejected', statusRaw:'Reject',
-      approver:'@Kina de Cordoba', pushedDateRaw:'', justify:'cuz', sdrDo:'', assets:'No', priority:'cuz', announceDate:null, timestamp:'' },
+    { name:'Calendar Creation Testing', submittedBy:'@Lindsey', type:'Incentives', goal:'Awareness', desc:'Testing stuff', link:'www.google.com', segments:'Retail', impact:'NAMER', launchDate:d(2026,6,12), originalLaunch:d(2026,6,12), durationWeeks:2, endDate:d(2026,6,25), status:'approved', statusRaw:'Approve', approver:'@Kina de Cordoba', pushedDateRaw:'', justify:'cuz', sdrDo:'nope.', assets:'Yes', priority:'CUZ', announceDate:d(2026,6,10), timestamp:'' },
+    { name:'Fixing B Option', submittedBy:'@Lindsey', type:'Direct Mailer', goal:'fixing bugs', desc:'the same as above', link:'www.bug.com', segments:'Core OB ENT', impact:'INTERNATIONAL', launchDate:d(2026,6,22), originalLaunch:d(2026,6,15), durationWeeks:2, endDate:d(2026,7,5), status:'pushed', statusRaw:'Push Out', approver:'@Kina de Cordoba', pushedDateRaw:'2026-06-22', justify:'cuz', sdrDo:'', assets:'Yes', priority:'cuz', announceDate:d(2026,6,14), timestamp:'' },
+    { name:'Testing the reject button', submittedBy:'@Charles Becker', type:'Events', goal:'testing', desc:'testing', link:'www.test.com', segments:'Core OB SMB', impact:'US Only', launchDate:d(2026,6,15), originalLaunch:d(2026,6,15), durationWeeks:2, endDate:d(2026,6,28), status:'rejected', statusRaw:'Reject', approver:'@Kina de Cordoba', pushedDateRaw:'', justify:'cuz', sdrDo:'', assets:'No', priority:'cuz', announceDate:null, timestamp:'' },
   ];
 }
 
@@ -573,39 +311,30 @@ function showError(msg) {
   el.textContent = msg; el.classList.add('show');
 }
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
 const STATUS_COLOR = { approved:'#16a34a', pending:'#b45309', pushed:'#6d28d9', rejected:'#b91c1c' };
 const STATUS_CLASS = { approved:'status-approved', pending:'status-pending', pushed:'status-pushed' };
-const BADGE_CLASS  = { approved:'badge-approved',  pending:'badge-pending',  pushed:'badge-pushed', rejected:'badge-rejected' };
+const BADGE_CLASS  = { approved:'badge-approved', pending:'badge-pending', pushed:'badge-pushed', rejected:'badge-rejected' };
 const STATUS_LABEL = { approved:'Approved', pending:'Pending', pushed:'Pushed Out', rejected:'Rejected' };
 
-// ── Calendar ──────────────────────────────────────────────────────────────────
 function renderCalendar() {
   const grid = document.getElementById('cal-grid');
   grid.innerHTML = '';
-
   document.getElementById('month-label').textContent =
     new Date(currentYear, currentMonth).toLocaleDateString('en-US', {month:'long', year:'numeric'});
-
   const firstDay    = new Date(currentYear, currentMonth, 1).getDay();
   const daysInMonth = new Date(currentYear, currentMonth+1, 0).getDate();
   const today       = new Date();
   const totalCells  = Math.ceil((firstDay + daysInMonth) / 7) * 7;
-
   for (let ci = 0; ci < totalCells; ci++) {
     const date = new Date(currentYear, currentMonth, ci - firstDay + 1);
     const isCur   = date.getMonth() === currentMonth;
     const isToday = date.toDateString() === today.toDateString();
-
     const cell = document.createElement('div');
     cell.className = 'cal-day' + (!isCur ? ' other-month' : '') + (isToday ? ' today' : '');
-
     const numEl = document.createElement('div');
     numEl.className = 'day-num';
     numEl.textContent = date.getDate();
     cell.appendChild(numEl);
-
-    // Announce dot
     campaigns.filter(c => c.announceDate && c.announceDate.toDateString() === date.toDateString())
       .forEach(() => {
         const a = document.createElement('span');
@@ -613,8 +342,6 @@ function renderCalendar() {
         a.textContent = '📣';
         numEl.appendChild(a);
       });
-
-    // Only non-rejected campaigns on the calendar
     const active = campaigns.filter(c => {
       if (c.status === 'rejected') return false;
       if (!c.launchDate || !c.endDate) return false;
@@ -623,7 +350,6 @@ function renderCalendar() {
       const dd = new Date(date);        dd.setHours(0,0,0,0);
       return dd >= ld && dd <= ed;
     });
-
     const MAX = 3;
     const makeChip = (c, date) => {
       const chip = document.createElement('div');
@@ -635,7 +361,6 @@ function renderCalendar() {
       nameLine.textContent = (isStart ? '▸ ' : '') + c.name;
       chip.appendChild(nameLine);
       if (c.segments) {
-        // Split on comma or newline — handles multi-select from Slack form
         const segList = c.segments.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
         const wrap = document.createElement('div');
         wrap.style.cssText = 'display:flex;flex-wrap:wrap;gap:2px;margin-top:3px';
@@ -650,9 +375,7 @@ function renderCalendar() {
       chip.title = c.name + (c.segments ? ` · ${c.segments}` : '');
       return chip;
     };
-
     active.slice(0, MAX).forEach(c => cell.appendChild(makeChip(c, date)));
-
     if (active.length > MAX) {
       const more = document.createElement('div');
       more.className = 'more-chip';
@@ -663,12 +386,10 @@ function renderCalendar() {
       };
       cell.appendChild(more);
     }
-
     grid.appendChild(cell);
   }
 }
 
-// ── List view ─────────────────────────────────────────────────────────────────
 function renderList() {
   const container = document.getElementById('list-view');
   const sorted = [...campaigns].sort((a,b) => {
@@ -676,19 +397,12 @@ function renderList() {
     if (!b.launchDate) return -1;
     return a.launchDate - b.launchDate;
   });
-
-  if (!sorted.length) {
-    container.innerHTML = '<div class="loading"><span>No campaigns found.</span></div>';
-    return;
-  }
-
+  if (!sorted.length) { container.innerHTML = '<div class="loading"><span>No campaigns found.</span></div>'; return; }
   const fmt = d => d ? new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : '—';
   const fmtShort = d => d ? new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
-
   container.innerHTML = sorted.map(c => {
     const isRej = c.status === 'rejected';
-    const pushed = c.pushedDateRaw
-      ? `<span style="color:var(--muted);font-size:11px">(pushed from ${fmtShort(c.originalLaunch)})</span>` : '';
+    const pushed = c.pushedDateRaw ? `<span style="color:var(--muted);font-size:11px">(pushed from ${fmtShort(c.originalLaunch)})</span>` : '';
     return `<div class="list-card" onclick='openModal(${JSON.stringify(c).replace(/'/g,"&#39;")})' style="${isRej?'opacity:.4;':''}">
       <div class="stripe" style="background:${STATUS_COLOR[c.status]||'#9ca3af'}"></div>
       <div>
@@ -711,12 +425,10 @@ function renderList() {
   }).join('');
 }
 
-// ── Modal ─────────────────────────────────────────────────────────────────────
 function openModal(c) {
   if (typeof c === 'string') c = JSON.parse(c);
   const fmt = d => d ? new Date(d).toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric',year:'numeric'}) : '—';
   const row = (l, v) => `<div class="modal-row"><div class="label">${l}</div><div class="value">${v}</div></div>`;
-
   document.getElementById('modal-body').innerHTML = `
     <h2>${c.name}</h2>
     <div style="margin-bottom:12px"><span class="status-badge ${BADGE_CLASS[c.status]||''}">${STATUS_LABEL[c.status]||c.status}</span></div>
@@ -746,15 +458,14 @@ function closeModal(e) {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-// ── Nav ───────────────────────────────────────────────────────────────────────
 function prevMonth() { if (--currentMonth < 0) { currentMonth=11; currentYear--; } render(); }
 function nextMonth() { if (++currentMonth > 11) { currentMonth=0; currentYear++; } render(); }
 function goToday()   { currentMonth=new Date().getMonth(); currentYear=new Date().getFullYear(); render(); }
 
 function setView(v) {
   currentView = v;
-  document.getElementById('cal-view').style.display   = v==='calendar' ? '' : 'none';
-  document.getElementById('list-view').style.display  = v==='list' ? 'block' : 'none';
+  document.getElementById('cal-view').style.display  = v==='calendar' ? '' : 'none';
+  document.getElementById('list-view').style.display = v==='list' ? 'block' : 'none';
   document.getElementById('btn-cal').className  = v==='calendar' ? 'active' : '';
   document.getElementById('btn-list').className = v==='list' ? 'active' : '';
   render();
@@ -765,7 +476,6 @@ function render() {
   else renderList();
 }
 
-// ── Boot ──────────────────────────────────────────────────────────────────────
 fetchData();
 refreshTimer = setInterval(fetchData, 60000);
 </script>
